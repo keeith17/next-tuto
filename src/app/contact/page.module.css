@@ -1,3 +1,54 @@
 .container {
-    background: brown;
+
+}
+
+.title {
+    font-size:60px;
+    margin-bottom:100px;
+    text-align:center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.imgContainer {
+    flex:1;
+    height:500px;
+    position:relative;
+}
+
+.image {
+    object-fit: cover;
+    animation: move 3s infinite alternate;
+}
+@keyframes move {
+    from {
+        /* transform:translateY(-15px); */
+        opacity:.2;
+        /* transform:translateX(-15px); */
+        /* transtorm:translateX(15px); */
+    }
+    to {
+        /* transtrom:translateY(0px) scale(1.03); */
+        opacity:1;
+    }
+}
+
+.form {
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.input, .textArea {
+    padding:20px;
+    background:transparent;
+    outline:none;
+    color:#bbb;
+    border:3px solid #bbb;
+    font-size:17px;
 }
