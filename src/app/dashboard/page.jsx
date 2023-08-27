@@ -34,14 +34,6 @@ const Dashboard = () => {
     fetcher
   );
 
-  if(session.status === "loading"){
-    return <p>Loading...</p>;
-  }
-  
-  if(session.status === "unauthenticated"){
-    router?.push("/dashboard/login")
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target[0].value;
@@ -77,6 +69,14 @@ const Dashboard = () => {
     }
   }
   console.log(data);
+  if(session.status === "loading"){
+    return <p>Loading...</p>;
+  }
+  
+  if(session.status === "unauthenticated"){
+    router?.push("/dashboard/login")
+  }
+
   if(session.status === "authenticated") {
     return <div className={styles.container}>
       <div className={styles.posts}>
