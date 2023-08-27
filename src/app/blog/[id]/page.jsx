@@ -4,9 +4,9 @@ import styles from './page.module.css'
 import { notFound } from "next/navigation"
 
 async function getData(id) {
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
-    //next: { revalidate: 10 },
-    cache: 'no-store'
+  const res = await fetch(`http://0.0.0.0:3000/api/posts/${id}`, {
+    next: { revalidate: 10 },
+    // cache: 'no-store'
   });
   if (!res.ok) {
     return notFound();

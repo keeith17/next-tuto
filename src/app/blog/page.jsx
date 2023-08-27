@@ -4,9 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/posts', {
-    //next: { revalidate: 10 },
-    cache: 'no-store'
+  const res = await fetch('http://0.0.0.0:3000/api/posts', {
+    next: { revalidate: 10 },
+    // cache: 'no-store'
   });
   if (!res.ok) {
     throw new Error('Failed to fetch data')
