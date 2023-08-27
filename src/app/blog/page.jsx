@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/posts', {
+  const res = await fetch('ec2-54-79-27-149.ap-southeast-2.compute.amazonaws.com/api/posts', {
     //next: { revalidate: 10 },
     cache: 'no-store'
   });
