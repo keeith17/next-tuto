@@ -4,7 +4,7 @@ import styles from './page.module.css'
 import { notFound } from "next/navigation"
 
 async function getData(id) {
-  const res = await fetch(`ec2-54-79-27-149.ap-southeast-2.compute.amazonaws.com/api/posts/${id}`, {
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
     //next: { revalidate: 10 },
     cache: 'no-store'
   });
