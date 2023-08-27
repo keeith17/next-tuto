@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div>@2023 gabin. All rights reserved.</div>
-      <div>
+      {/* <div>
         <Image src="" alt="gabin portfolio"/>
-      </div>
+      </div> */}
     </div>
   )
 }
