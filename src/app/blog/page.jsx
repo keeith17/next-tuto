@@ -3,22 +3,22 @@ import styles from './page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
-async function getData() {
-  const res = await fetch('http://0.0.0.0:3000/api/posts', {
-    next: { revalidate: 10 },
-    // cache: 'no-store'
-  });
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-  return res.json();
-}
+// async function getData() {
+//   const res = await fetch('http://0.0.0.0:3000/api/posts', {
+//     next: { revalidate: 10 },
+//     // cache: 'no-store'
+//   });
+//   if (!res.ok) {
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json();
+// }
 
 const Blog = async () => {
-  const data = await getData();
+  //const data = await getData();
   return (
     <div className={styles.mainContainer}>
-      {data.map(item => (
+      {/* {data.map(item => (
       <Link href={`blog/${item._id}`}  className={styles.container} key={item.id}>
         <div className={styles.imageContainer}>
           <Image
@@ -34,7 +34,7 @@ const Blog = async () => {
           <p className={styles.desc}>{item.desc}</p>
         </div>
       </Link>
-      ))}
+      ))} */}
     </div>
   )
 }
