@@ -33,7 +33,6 @@ const Dashboard = () => {
     `api/posts?username=${session?.data?.user.name}`,
     fetcher
   );
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target[0].value;
