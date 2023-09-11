@@ -32,3 +32,14 @@
     color:#eee;
     font-weight: bold;
   }
+
+.google {
+    width: 300px;
+    padding: 20px;
+    cursor: pointer;
+    background:#eee;
+    border:none;
+    border-radius:5px;
+    color:#333;
+    font-weight: bold;
+}

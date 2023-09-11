@@ -40,7 +40,7 @@ const Login = () => {
         />
         <button className={styles.button}>Login</button>
       </form>
-      <button onClick={()=>signIn("google")}>Login with Google</button>
+      <button className={styles.google} onClick={()=>signIn("google")}>Login with Google</button>
     </div>
   )
 }
