@@ -23,7 +23,27 @@ const Category = ({ params }) => {
                     <div className={styles.content}>
                         <h1 className={styles.title}>{item.title}</h1>
                         <p className={styles.desc}>{item.desc}</p>
-                        <Button text="See More" url="#" />
+                        <div className={styles.skill}>
+                            <p className={styles.desc}>
+                                <span className={styles.name}>FRONT:</span>
+                                {item.front}
+                            </p>
+                            <p className={styles.desc}>
+                                <span className={styles.name}>BACK:</span>
+                                {item.back}
+                            </p>
+                            <p className={styles.desc}>
+                                <span className={styles.name}>DEPLOY:</span>
+                                {item.deploy}
+                            </p>
+                        </div>
+                        <p className={styles.desc}>
+                            <span className={styles.name}>
+                                배운 / 아쉬운 점
+                            </span>
+                            {item.learn}
+                        </p>
+                        <Button text="See More" url={item.url} />
                     </div>
                     <div className={styles.imgContainer}>
                         <Image

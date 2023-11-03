@@ -7,7 +7,7 @@ const Portfolio = () => {
         <div className={styles.container}>
             <h1 className={styles.selectTitle}>작업물을 선택해 주세요.</h1>
             <div className={styles.items}>
-                <Link href="/portfolio/illustrations" className={styles.item}>
+                <Link href="/portfolio/pofohome" className={styles.item}>
                     <span className={styles.title}>포트폴리오 홈</span>
                 </Link>
                 <Link href="/portfolio/websites" className={styles.item}>

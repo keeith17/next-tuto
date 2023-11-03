@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const postSchema = new Schema(
+const newPostSchema = new Schema(
     {
         title: {
             type: String,
@@ -28,4 +28,5 @@ const postSchema = new Schema(
     { timestamps: true }
 );
 
-export default mongoose.models.Post || mongoose.model("Post", postSchema);
+export default mongoose.models.NewPost ||
+    mongoose.model("NewPost", newPostSchema);

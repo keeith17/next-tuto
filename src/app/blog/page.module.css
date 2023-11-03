@@ -10,14 +10,20 @@
 }
 
 .content {
-
 }
 
 .title {
+    font-size:20px;
     margin-bottom:10px;
 }
 
 .desc {
-    font-size:18px;
+    font-size:16px;
     color:#999;
+    width:990px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }

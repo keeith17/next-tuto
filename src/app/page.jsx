@@ -23,9 +23,11 @@ export default function Home() {
             </div>
             <div className={styles.itemRight}>
                 <div className={styles.itemBox}>
-                    <div className={styles.sTitle}>기술 스택</div>
+                    <div className={styles.sTitle}>SKILLS</div>
                     <div className={styles.content}>
-                        <p>HTML5&nbsp;&nbsp;CSS3&nbsp;&nbsp;jQuery</p>
+                        <p>
+                            HTML5&nbsp;&nbsp;CSS3&nbsp;&nbsp;SWR&nbsp;&nbsp;RECOIL
+                        </p>
                         <p>
                             javaScript&nbsp;&nbsp;typeScript&nbsp;&nbsp;PHP&nbsp;&nbsp;Firebase
                         </p>
@@ -33,7 +35,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={styles.itemBox}>
-                    <div className={styles.sTitle}>자격증</div>
+                    <div className={styles.sTitle}>CERTIFICATION</div>
                     <div className={styles.content}>
                         <p>
                             웹디자인 기능사

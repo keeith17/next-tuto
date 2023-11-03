@@ -120,21 +120,21 @@ const Dashboard = () => {
                     <h1>새 글을 등록해 주세요.</h1>
                     <input
                         type="text"
-                        placeholder="Title"
+                        placeholder="제목"
                         className={styles.input}
                     />
                     <input
                         type="text"
-                        placeholder="Desc"
+                        placeholder="연락처"
                         className={styles.input}
                     />
                     <input
                         type="text"
-                        placeholder="Image Link"
+                        placeholder="이미지 링크 / 비워 두셔도 됩니다"
                         className={styles.input}
                     />
                     <textarea
-                        placeholder="Content"
+                        placeholder="내용"
                         className={styles.textArea}
                         cols="30"
                         rows="10"
