@@ -30,13 +30,13 @@
 }
 
 .item:nth-child(1){
-    background: url("/portfolioPage1.png") 50% 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.3)), url("/portfolioPage1.png") 50% 50%;
 }
 .item:nth-child(2){
-    background: url("/puppy.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.3)), url("/project1.png");
 }
 .item:nth-child(3){
-    background: url("/rabbit.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.3)), url("/rabbit.jpeg");
 }
 
 .title {

@@ -10,8 +10,8 @@ const Portfolio = () => {
                 <Link href="/portfolio/pofohome" className={styles.item}>
                     <span className={styles.title}>포트폴리오 홈</span>
                 </Link>
-                <Link href="/portfolio/websites" className={styles.item}>
-                    <span className={styles.title}>Websites</span>
+                <Link href="/portfolio/boysplanet" className={styles.item}>
+                    <span className={styles.title}>모의 투표 서비스</span>
                 </Link>
                 <Link href="/portfolio/applications" className={styles.item}>
                     <span className={styles.title}>Applications</span>

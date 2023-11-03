@@ -43,7 +43,7 @@ const Category = ({ params }) => {
                             </span>
                             {item.learn}
                         </p>
-                        <Button text="See More" url={item.url} />
+                        <Button text="사이트로 이동" url={item.url} />
                     </div>
                     <div className={styles.imgContainer}>
                         <Image
