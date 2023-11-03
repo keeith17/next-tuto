@@ -117,7 +117,7 @@ const Dashboard = () => {
                           ))}
                 </div>
                 <form className={styles.new} onSubmit={handleSubmit}>
-                    <h1>Add New Post</h1>
+                    <h1>새 글을 등록해 주세요.</h1>
                     <input
                         type="text"
                         placeholder="Title"

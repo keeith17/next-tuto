@@ -19,8 +19,7 @@ export default function Home() {
                         <span className={styles.myName}>염가빈</span>입니다.
                     </div>
                 </div>
-
-                <Button url="/portfolio" text="포트폴리오 보러 가기" />
+                <Button url="/portfolio" text="작업물 보러 가기" />
             </div>
             <div className={styles.itemRight}>
                 <div className={styles.itemBox}>
@@ -48,11 +47,15 @@ export default function Home() {
                 </div>
                 <div className={styles.contactBox}>
                     <p className={styles.contact}>
-                        github: https://github.com/keeith17
+                        github:{" "}
+                        <a href="https://github.com/keeith17">
+                            https://github.com/keeith17
+                        </a>
                     </p>
                     <p className={styles.contact}>
                         Email: paranoiaque17@gmail.com
                     </p>
+                    <p className={styles.contact}>Phone: 010-9130-7141</p>
                 </div>
                 {/* <Image src={mainImage} alt="mainImage" className={styles.img} /> */}
             </div>

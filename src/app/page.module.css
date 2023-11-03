@@ -36,6 +36,16 @@
 .myName {
   font-size: 72px;
   color: #921212;
+  animation: twinkle 1.7s infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
 }
 
 .img {
@@ -44,6 +54,7 @@
   object-fit: cover;
   /* animation: move 3s infinite ease alternate; */
 }
+
 @keyframes move {
     from {
         transform:translateY(-15px);
@@ -86,11 +97,15 @@
   padding: 6px;
 }
 
-.content > p .date {
-  
-}
-
 .contact {
   font-size: 16px;
   padding: 6px;
+}
+
+.contact a {
+  font-size: 16px;
+}
+
+.contact a:hover {
+  text-decoration: underline;
 }

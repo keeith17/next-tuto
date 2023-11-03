@@ -5,8 +5,8 @@ import Image from "next/image";
 
 async function getData() {
     const res = await fetch("https://next-tuto-one.vercel.app/api/posts", {
-        //next: { revalidate: 10 },
-        cache: "no-store",
+        next: { revalidate: 5 },
+        // cache: "no-store",
     });
     if (!res.ok) {
         throw new Error("Failed to fetch data");
@@ -32,8 +32,8 @@ const Blog = async () => {
                                     : item.img
                             }
                             alt=""
-                            width={400}
-                            height={250}
+                            width={200}
+                            height={125}
                             className={styles.image}
                         />
                     </div>
