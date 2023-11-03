@@ -2,12 +2,11 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-// import useSWR from "swr";
 
 async function getData() {
     const res = await fetch("https://next-tuto-one.vercel.app/api/posts", {
-        next: { revalidate: 10 },
-        // cache: 'no-store'
+        next: { revalidate: 5 },
+        // cache: "no-store",
     });
     if (!res.ok) {
         throw new Error("Failed to fetch data");
@@ -17,22 +16,24 @@ async function getData() {
 
 const Blog = async () => {
     const data = await getData();
-    //const fetcher = (...args) => fetch(...args).then((res) => res.json());
-    //const { data, mutate, error, isLoading } = useSWR(`api/posts`, fetcher);
     return (
         <div className={styles.mainContainer}>
-            {data?.map((item) => (
+            {data.map((item) => (
                 <Link
                     href={`blog/${item._id}`}
                     className={styles.container}
-                    key={item._id}
+                    key={item.id}
                 >
                     <div className={styles.imageContainer}>
                         <Image
-                            src={item.img}
+                            src={
+                                item.img === ""
+                                    ? "https://images.pexels.com/photos/4031043/pexels-photo-4031043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    : item.img
+                            }
                             alt=""
-                            width={400}
-                            height={250}
+                            width={200}
+                            height={125}
                             className={styles.image}
                         />
                     </div>

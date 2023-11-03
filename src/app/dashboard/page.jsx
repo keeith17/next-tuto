@@ -33,13 +33,30 @@ const Dashboard = () => {
         `api/posts?username=${session?.data?.user.name}`,
         fetcher
     );
+
+    if (session.status === "loading") {
+        return <p>Loading...</p>;
+    }
+
+    if (session.status === "unauthenticated") {
+        router?.push("/dashboard/login");
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const title = e.target[0].value;
         const desc = e.target[1].value;
         const img = e.target[2].value;
         const content = e.target[3].value;
-
+        console.log(
+            JSON.stringify({
+                title,
+                desc,
+                img,
+                content,
+                username: session.data.user.name,
+            })
+        );
         try {
             await fetch("/api/posts", {
                 method: "POST",
@@ -53,8 +70,8 @@ const Dashboard = () => {
             });
             mutate();
             e.target.reset();
-        } catch (error) {
-            console.log("err", error);
+        } catch (err) {
+            console.log(err);
         }
     };
     const handleDelete = async (id) => {
@@ -63,18 +80,10 @@ const Dashboard = () => {
                 method: "DELETE",
             });
             mutate();
-        } catch (error) {
-            console.log("err", error);
+        } catch (err) {
+            console.log(err);
         }
     };
-    if (session.status === "loading") {
-        return <p>Loading...</p>;
-    }
-
-    if (session.status === "unauthenticated") {
-        router?.push("/dashboard/login");
-    }
-
     if (session.status === "authenticated") {
         return (
             <div className={styles.container}>
@@ -85,7 +94,11 @@ const Dashboard = () => {
                               <div className={styles.post} key={post._id}>
                                   <div className={styles.imgContainer}>
                                       <Image
-                                          src={post.img}
+                                          src={
+                                              post.img === ""
+                                                  ? "https://images.pexels.com/photos/4031043/pexels-photo-4031043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                                  : post.img
+                                          }
                                           alt=""
                                           fill={true}
                                           className={styles.img}
@@ -104,7 +117,7 @@ const Dashboard = () => {
                           ))}
                 </div>
                 <form className={styles.new} onSubmit={handleSubmit}>
-                    <h1>Add New Post</h1>
+                    <h1>새 글을 등록해 주세요.</h1>
                     <input
                         type="text"
                         placeholder="Title"
@@ -117,7 +130,7 @@ const Dashboard = () => {
                     />
                     <input
                         type="text"
-                        placeholder="Image"
+                        placeholder="Image Link"
                         className={styles.input}
                     />
                     <textarea
