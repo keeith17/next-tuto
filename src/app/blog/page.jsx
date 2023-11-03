@@ -26,7 +26,11 @@ const Blog = async () => {
                 >
                     <div className={styles.imageContainer}>
                         <Image
-                            src={item.img}
+                            src={
+                                item.img === ""
+                                    ? "https://images.pexels.com/photos/4031043/pexels-photo-4031043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    : item.img
+                            }
                             alt=""
                             width={400}
                             height={250}

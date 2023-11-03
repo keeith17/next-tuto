@@ -26,9 +26,11 @@ export default function Home() {
                 <div className={styles.itemBox}>
                     <div className={styles.sTitle}>기술 스택</div>
                     <div className={styles.content}>
-                        <p>HTML5, CSS3, jQuery</p>
-                        <p>javaScript, typeScript, PHP, Firebase</p>
-                        <p>React.js, Next.js</p>
+                        <p>HTML5&nbsp;&nbsp;CSS3&nbsp;&nbsp;jQuery</p>
+                        <p>
+                            javaScript&nbsp;&nbsp;typeScript&nbsp;&nbsp;PHP&nbsp;&nbsp;Firebase
+                        </p>
+                        <p>React.js&nbsp;&nbsp;Next.js</p>
                     </div>
                 </div>
                 <div className={styles.itemBox}>
