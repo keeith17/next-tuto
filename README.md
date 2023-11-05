@@ -1,7 +1,8 @@
-## 설치
+## 설치 및 실행
 
 ```bash
 npm i
+npm run dev
 ```
 
 ## 프로젝트
