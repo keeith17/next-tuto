@@ -10,6 +10,6 @@ npm i
 
 ## 사용한 skill
 
-FRONT:Next.js, javascript, SWR
-BACK:NextAuth, mongoDB
+FRONT:Next.js, javascript, SWR  
+BACK:NextAuth, mongoDB  
 DEPLOY:Vercel

@@ -44,6 +44,7 @@ const Category = ({ params }) => {
                             </span>
                             {item.learn}
                         </p>
+                        <a href={item.git}>깃허브 주소: {item.git}</a>
                         <Button text="사이트로 이동" url={item.url} />
                     </div>
                     <div className={styles.imgContainer}>
