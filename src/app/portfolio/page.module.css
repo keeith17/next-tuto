@@ -33,10 +33,10 @@
     background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.3)), url("/portfolioPage1.png") 50% 50%;
 }
 .item:nth-child(2){
-    background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.3)), url("/project1.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.3)), url("/project1.png") 50% 50%;
 }
 .item:nth-child(3){
-    background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.3)), url("/rabbit.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.3)), url("/project2.png") 50% 50%;
 }
 
 .title {

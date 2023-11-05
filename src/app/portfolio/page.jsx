@@ -14,7 +14,7 @@ const Portfolio = () => {
                     <span className={styles.title}>모의 투표 서비스</span>
                 </Link>
                 <Link href="/portfolio/applications" className={styles.item}>
-                    <span className={styles.title}>Applications</span>
+                    <span className={styles.title}>트위터 클론 코딩</span>
                 </Link>
             </div>
         </div>

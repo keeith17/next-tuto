@@ -31,4 +31,9 @@
     border-radius:5px;
     color:#eee;
     font-weight: bold;
-  }
+}
+
+.login {
+    width:300px;
+    text-align: right;
+}

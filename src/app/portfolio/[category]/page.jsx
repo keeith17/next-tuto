@@ -23,6 +23,7 @@ const Category = ({ params }) => {
                     <div className={styles.content}>
                         <h1 className={styles.title}>{item.title}</h1>
                         <p className={styles.desc}>{item.desc}</p>
+                        <p className={styles.desc}>{item.role}</p>
                         <div className={styles.skill}>
                             <p className={styles.desc}>
                                 <span className={styles.name}>FRONT:</span>

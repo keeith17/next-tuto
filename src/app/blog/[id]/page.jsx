@@ -7,7 +7,7 @@ async function getData(id) {
     const res = await fetch(
         `https://next-tuto-one.vercel.app/api/posts/${id}`,
         {
-            //next: { revalidate: 10 },
+            next: { revalidate: 5 },
             cache: "no-store",
         }
     );
@@ -32,8 +32,8 @@ const BlogPost = async ({ params }) => {
                 <div className={styles.info}>
                     <h1 className={styles.title}>{data.title}</h1>
                     <div className={styles.author}>
-                        <p className={styles.desc}>{data.desc}</p>
                         <span className={styles.username}>{data.username}</span>
+                        <p className={styles.desc}>{data.desc}</p>
                     </div>
                     <div className={styles.content}>
                         <p className={styles.text}>{data.content}</p>
