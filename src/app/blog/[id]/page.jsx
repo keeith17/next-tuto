@@ -4,31 +4,31 @@ import styles from "./page.module.css";
 import { notFound } from "next/navigation";
 
 async function getData(id) {
-    // const res = await fetch(
-    //     `https://next-tuto-one.vercel.app/api/posts/${id}`,
-    //     {
-    //         next: { revalidate: 5 },
-    //         cache: "no-store",
-    //     }
-    // );
-    // if (!res.ok) {
-    //     return notFound();
-    //     //throw new Error('Failed to fetch data')
-    // }
-    // return res.json();
+    const res = await fetch(
+        `https://portfolio-home-gabin.vercel.app/api/posts/${id}`,
+        {
+            next: { revalidate: 5 },
+            cache: "no-store",
+        }
+    );
+    if (!res.ok) {
+        return notFound();
+        //throw new Error('Failed to fetch data')
+    }
+    return res.json();
 }
 export async function generateMetadata({ params }) {
-    // const post = await getData(params.id);
-    // return {
-    //     title: post.title,
-    //     description: post.desc,
-    // };
+    const post = await getData(params.id);
+    return {
+        title: post.title,
+        description: post.desc,
+    };
 }
 const BlogPost = async ({ params }) => {
-    // const data = await getData(params.id);
+    const data = await getData(params.id);
     return (
         <div className={styles.container}>
-            {/* <div className={styles.top}>
+            <div className={styles.top}>
                 <div className={styles.info}>
                     <h1 className={styles.title}>{data.title}</h1>
                     <div className={styles.author}>
@@ -51,7 +51,7 @@ const BlogPost = async ({ params }) => {
                         className={styles.image}
                     />
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };

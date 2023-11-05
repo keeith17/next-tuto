@@ -4,21 +4,24 @@ import Link from "next/link";
 import Image from "next/image";
 
 async function getData() {
-    // const res = await fetch("https://next-tuto-one.vercel.app/api/posts", {
-    //     next: { revalidate: 5 },
-    //     // cache: "no-store",
-    // });
-    // if (!res.ok) {
-    //     throw new Error("Failed to fetch data");
-    // }
-    // return res.json();
+    const res = await fetch(
+        "https://portfolio-home-gabin.vercel.app/api/posts",
+        {
+            next: { revalidate: 5 },
+            // cache: "no-store",
+        }
+    );
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+    return res.json();
 }
 
 const Blog = async () => {
-    // const data = await getData();
+    const data = await getData();
     return (
         <div className={styles.mainContainer}>
-            {/* {data.map((item) => (
+            {data.map((item) => (
                 <Link
                     href={`blog/${item._id}`}
                     className={styles.container}
@@ -42,7 +45,7 @@ const Blog = async () => {
                         <p className={styles.desc}>{item.content}</p>
                     </div>
                 </Link>
-            ))} */}
+            ))}
         </div>
     );
 };
