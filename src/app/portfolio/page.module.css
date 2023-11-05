@@ -50,3 +50,12 @@
 .item:hover .title {
     color:#921212;
 }
+
+@media all and (max-width:550px){
+    .items {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .title {
+        font-size: 30px;
+    }
+}

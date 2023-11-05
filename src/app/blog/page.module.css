@@ -9,9 +9,6 @@
     object-fit: cover;
 }
 
-.content {
-}
-
 .title {
     font-size:20px;
     margin-bottom:10px;
@@ -26,4 +23,22 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+}
+
+@media all and (max-width:550px){
+    .container {
+        flex-flow: wrap;
+        gap: 20px;
+    }
+    .imageContainer {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .desc {
+        width: 350px;
+    }
 }

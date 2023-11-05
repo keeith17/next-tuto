@@ -16,6 +16,12 @@
     gap:20px;
 }
 
+.items {
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
 .logout {
     padding: 5px;
     border: none;
@@ -23,4 +29,24 @@
     background:#921212;
     color: white;
     cursor: pointer;
+}
+
+@media all and (max-width:550px){
+    .container {
+        justify-content: center;
+    }
+    .logo {
+        display:none;
+    }
+
+    .links {
+        flex-flow: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .items {
+        justify-content: flex-end;
+    }
 }

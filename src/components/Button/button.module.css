@@ -12,3 +12,10 @@
 .container:hover {
   background:#921212b1;
 }
+
+@media all and (max-width:550px){
+  .container{
+    font-size: 12px;
+    padding: 15px;
+  }
+}

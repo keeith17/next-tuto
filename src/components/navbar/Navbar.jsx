@@ -46,17 +46,25 @@ const Navbar = () => {
                 gabin portfolio
             </Link>
             <div className={styles.links}>
-                <DarkModeToggle />
-                {links.map((link) => (
-                    <Link key={link.id} href={link.url} className={styles.link}>
-                        {link.title}
-                    </Link>
-                ))}
-                {session.status === "authenticated" && (
-                    <button className={styles.logout} onClick={signOut}>
-                        Logout
-                    </button>
-                )}
+                <div className={styles.items}>
+                    {links.map((link) => (
+                        <Link
+                            key={link.id}
+                            href={link.url}
+                            className={styles.link}
+                        >
+                            {link.title}
+                        </Link>
+                    ))}
+                </div>
+                <div className={styles.items}>
+                    <DarkModeToggle />
+                    {session.status === "authenticated" && (
+                        <button className={styles.logout} onClick={signOut}>
+                            Logout
+                        </button>
+                    )}
+                </div>
             </div>
         </div>
     );
